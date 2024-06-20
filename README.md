@@ -1,7 +1,9 @@
 This repo contains a dump of the data that is used in the Green Cooling Initiative's [Country Data](https://www.green-cooling-initiative.org/country-data) map.
 
 The data was accessed with the following command:
-```curl 'https://www.green-cooling-initiative.org/typo3conf/ext/worldmaptool/Resources/Public/Javascript/countries.json' --output raw.json```
+```
+curl 'https://www.green-cooling-initiative.org/typo3conf/ext/worldmaptool/Resources/Public/Javascript/countries.json' --output raw.json
+```
 
 The output is stored as `raw.json`, which contains the following fields:
 * `data`: 73944 rows of data. Each row here is a country-year-sector-scenario combination.
@@ -32,3 +34,6 @@ This repo contains the following files:
 * `data.csv`: the full dataset in csv form
 * `cleaned.csv`: like `data.csv` but aggregated on the country-year level, only for past data. Uses country names instead of ids.
 * `main.ipynb`: a jupyter notebook that takes `raw.json` and outputs the remaining files, plus shows how to load some of the other useful data (countries and sectors).
+
+# Update June 2024
+Green Cooling Initiative has released updated data, dumped here as `updated.json`. If you're interested in cleaned/csv versions of that data please let me know.
